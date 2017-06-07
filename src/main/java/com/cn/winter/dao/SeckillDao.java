@@ -1,6 +1,7 @@
 package com.cn.winter.dao;
 
 import com.cn.winter.entity.Seckill;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -16,7 +17,7 @@ public interface SeckillDao {
      * @param killTime
      * @return
      */
-    Integer updateReduceNumber(long seckillId, Date killTime);
+    Integer updateReduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
 
     /**
      * 根据id查找秒杀
@@ -31,5 +32,5 @@ public interface SeckillDao {
      * @param limit
      * @return
      */
-    List<Seckill> queryAllSeckill(Integer offset, Integer limit);
+    List<Seckill> queryAllSeckill(@Param("offset") Integer offset, @Param("limit") Integer limit);
 }
