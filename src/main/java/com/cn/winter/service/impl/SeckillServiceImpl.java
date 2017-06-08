@@ -84,7 +84,8 @@ public class SeckillServiceImpl implements SeckillService {
      * 3：不是所有的方法都需要事务，如只有一条操作，只读操作不需要事务管理。
      */
     @Transactional
-    public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws SeckillException, RepeatKillException, SeckillCloseException {
+    public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws SeckillException,
+            RepeatKillException, SeckillCloseException {
 
 
         if (md5 == null || !getMd5(seckillId).equals(md5)) {
