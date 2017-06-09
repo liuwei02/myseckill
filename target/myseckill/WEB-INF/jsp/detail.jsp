@@ -12,7 +12,7 @@
             <div class="panel-heading">${seckill.name}</div>
         </div>
         <div class="panel-body">
-
+            <button>开始秒杀</button>
         </div>
     </div>
 </body>

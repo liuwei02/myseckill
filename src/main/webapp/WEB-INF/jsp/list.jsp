@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:foreach var="sk" items="${data}" >
+                            <c:forEach var="sk" items="${data}" >
                                 <tr>
                                     <td>${sk.name}</td>
                                     <td>${sk.number}</td>
@@ -39,9 +39,9 @@
                                     <td>
                                         <fmt:formatDate value="${sk.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                     </td>
-                                    <td><<a class="btn btn-info" href="/seckill/{sk.seckillId}/detail">link</a>></td>
+                                    <td><a class="btn btn-info" href="/seckill/${sk.seckillId}/detail">link</a></td>
                                 </tr>
-                            </c:foreach>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>

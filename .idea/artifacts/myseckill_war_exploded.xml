@@ -39,6 +39,8 @@
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-api:1.0.8" />
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-runtime:1.0.8" />
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:jsp-api:6.0.29" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:el-api:6.0.29" />
         </element>
       </element>
       <element id="directory" name="META-INF">
