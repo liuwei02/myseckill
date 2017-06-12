@@ -42,7 +42,7 @@ public class SeckillController {
 
         List<Seckill> list = seckillService.getSeckillList();
         model.addAttribute("data", list);
-        return "/list";
+        return "list";
     }
 
     /**
@@ -63,7 +63,7 @@ public class SeckillController {
             return "forward:/seckill/list";
         }
         model.addAttribute("seckill", seckill);
-        return "/detail";
+        return "detail";
     }
 
     /**
@@ -125,6 +125,7 @@ public class SeckillController {
      * 拿到当前系统时间
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "/time/now", method = RequestMethod.GET)
     public SeckillResult<Long> time(){
         Date date = new Date();

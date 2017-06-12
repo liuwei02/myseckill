@@ -27,11 +27,13 @@
         2)允许"/"作为整体映射
     -->
     <mvc:default-servlet-handler/>
+    <!-- 添加对静态资源的访问 -->
+    <mvc:resources mapping="/static/**" location="/static/"/>
 
     <!-- 4.配置jsp， 显示ViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/jsp"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 </beans>
