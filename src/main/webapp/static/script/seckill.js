@@ -18,8 +18,8 @@ var seckill = {
     handleSeckill: function (seckillId, node) {
         node.hide().html('<button class="btn bg-primary btn-lg" id="killBtn">start seckill</button>');
         $.post(seckill.URL.exposer(seckillId), {}, function (result) {
-            console.log(result.success);
-            console.log(result.data.md5);
+            // console.log(result.success);
+            // console.log(result.data.md5);
             if (result && result['success']) {
                 var exposer = result['data'];
                 if (exposer['exposed']) {
@@ -34,7 +34,6 @@ var seckill = {
                                 var killResult = result['data'];
                                 var state = killResult['state'];
                                 var stateInfo = killResult['stateInfo'];
-
                                 node.html('<span class="label label-success">' + stateInfo + '</span>');
                             } else {
                                 node.html('<span class="label label-danger">不可重复秒杀哦</span>');
@@ -43,7 +42,13 @@ var seckill = {
                     });
                     node.show();
                 } else {
-                    console.log('还没开始呢');
+                    //未开启秒杀
+                    var now = exposer['now'];
+                    var start = exposer['start'];
+                    var end = exposer['end'];
+                    //重新计算计时逻辑
+                    seckill.countdown(seckillId, now, start, end);
+                    //console.log('还没开始呢');
                 }
             }
         });
@@ -134,3 +139,4 @@ var seckill = {
         },
     },
 }
+
