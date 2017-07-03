@@ -24,7 +24,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -73,5 +73,6 @@
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:jsp-api:6.0.29" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:el-api:6.0.29" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
   </component>
 </module>

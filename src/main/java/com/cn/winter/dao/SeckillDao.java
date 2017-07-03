@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/6/6.
@@ -33,4 +34,10 @@ public interface SeckillDao {
      * @return
      */
     List<Seckill> queryAllSeckill(@Param("offset") Integer offset, @Param("limit") Integer limit);
+
+    /**
+     *  使用存储过程
+     * @param paramMap
+     */
+    void killByProcedure(Map<String, Object> paramMap);
 }
